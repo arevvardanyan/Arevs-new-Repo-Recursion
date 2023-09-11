@@ -182,3 +182,25 @@ const generateCombinations = function(arr,i = 0,arr1 = []){
 
 const inputArray = [1, 2, 3, 4]; 
 // console.log(generateCombinations(inputArray));//չհասկացա թիվը ինչպես օգտագործել,դրա համար միայն 2 երկարությամբ մատրիցներով արեցի
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 12
+
+
+const subsetSum = function(arr,num,i = 0){
+    if(i > arr.length){
+        return false
+    }
+    for(let j = i + 1; j<arr.length;j++){
+           if(arr[i] + arr[j] === num){
+            return true
+           }
+    }
+    
+    return subsetSum(arr,num, i+1)
+    
+}
+
+const inputArray2 = [2,4,6,8,11]; 
+console.log(subsetSum(inputArray2,10));
