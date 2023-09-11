@@ -108,3 +108,24 @@ const flattenArray = function(arr,i = 0,j = 0){//3
 const nestedArray = [1, [2, [3, 4], 5], 6]
 
 // console.log(flattenArray(nestedArray))
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 9
+
+const countOccurrences = function(arr,num,i = 0,count = 0){
+
+    if(i > arr.length - 1){
+        return count
+    }
+
+    if(arr[i] === num){
+        count ++
+    }
+    
+    return countOccurrences(arr,num,i + 1,count)
+
+}
+
+const numbers = [2, 3, 4, 2, 5, 2, 6, 2,6]; 
+// console.log(countOccurrences(numbers, 6))
