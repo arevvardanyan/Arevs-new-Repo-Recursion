@@ -129,3 +129,20 @@ const countOccurrences = function(arr,num,i = 0,count = 0){
 
 const numbers = [2, 3, 4, 2, 5, 2, 6, 2,6]; 
 // console.log(countOccurrences(numbers, 6))
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 10
+
+const sumOfDigits = function(num,sum = 0){
+    if(num < 10){
+        return sum + num
+    }
+
+    let last = num % 10
+    let numFloor = Math.floor(num / 10)
+
+    return sumOfDigits(numFloor,sum + last)
+}
+
+// console.log(sumOfDigits(123))
