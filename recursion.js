@@ -67,3 +67,23 @@ const isPalindrome = function(str,i = str.length - 1,j = 0){//3,0, 2,1
 }
 
 // console.log(isPalindrome("racear"))
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 6
+
+const binarySearch = function(arr,num,i = 0){
+    if(i > arr.length - 1){
+        return -1
+    }
+
+    if(arr[i] === num){
+        return i
+    }
+
+    return binarySearch(arr,num,i + 1)
+
+}
+
+const sortedArray = [1, 3, 5, 7, 9, 11, 13, 15, 17]
+// console.log(binarySearch(sortedArray, 18))
