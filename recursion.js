@@ -87,3 +87,24 @@ const binarySearch = function(arr,num,i = 0){
 
 const sortedArray = [1, 3, 5, 7, 9, 11, 13, 15, 17]
 // console.log(binarySearch(sortedArray, 18))
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 7
+const flattenArray = function(arr,i = 0,j = 0){//3
+    if(i > arr.length - 1){
+        return 0
+    }
+
+    if(Array.isArray(arr[i])){
+        flattenArray(arr,i +2,j +1)
+        console.log(arr[i][j])
+    }
+
+    return flattenArray(arr,i+1)
+}
+
+
+const nestedArray = [1, [2, [3, 4], 5], 6]
+
+// console.log(flattenArray(nestedArray))
