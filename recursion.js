@@ -146,3 +146,17 @@ const sumOfDigits = function(num,sum = 0){
 }
 
 // console.log(sumOfDigits(123))
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 11
+
+const gcd = function(a,b,i = Math.min(a,b)){
+    if(a%i === 0 && b%i === 0){
+        return i
+    }
+
+    return gcd(a,b,i-1)
+}
+
+// console.log(gcd(48,18))
