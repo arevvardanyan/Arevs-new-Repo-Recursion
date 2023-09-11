@@ -49,3 +49,21 @@ const arraySum = function(arr,i = arr.length - 1){
 }
 
 // console.log(arraySum([1,2,3,4]))
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 5
+
+const isPalindrome = function(str,i = str.length - 1,j = 0){//3,0, 2,1
+    if(i < 0){
+        return true
+    }
+    if(str[i] !== str[j]){
+        return false
+        
+    }
+    
+    return isPalindrome(str,i-1,j+1)
+}
+
+// console.log(isPalindrome("racear"))
