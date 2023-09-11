@@ -160,3 +160,25 @@ const gcd = function(a,b,i = Math.min(a,b)){
 }
 
 // console.log(gcd(48,18))
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 12
+
+const generateCombinations = function(arr,i = 0,arr1 = []){
+    if(i>arr.length){
+        return arr1
+    }
+    for(let j = i + 1; j<arr.length;j++){
+        let newArr = []
+        newArr.push(arr[i],arr[j])
+        arr1.push(newArr)
+        
+    }
+    
+    return generateCombinations(arr, i+1,arr1)
+    
+}
+
+const inputArray = [1, 2, 3, 4]; 
+// console.log(generateCombinations(inputArray));//չհասկացա թիվը ինչպես օգտագործել,դրա համար միայն 2 երկարությամբ մատրիցներով արեցի
