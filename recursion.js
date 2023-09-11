@@ -36,3 +36,16 @@ const power = function(a,b){
 }
 
 // console.log(power(2,4))
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 4
+
+const arraySum = function(arr,i = arr.length - 1){
+    if(i === 0){
+        return arr[i]
+    }
+
+    return arr[i] + arraySum(arr,i - 1)
+}
+
+// console.log(arraySum([1,2,3,4]))
